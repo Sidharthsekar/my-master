@@ -18,7 +18,11 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
 - task: CmdLine@2
   inputs:
-    script: 'testrunner.bat "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"'
-    workingDirectory: 'C:\Program Files (x86)\SmartBear\SoapUI-5.5.0\bin'
+    script: |
+      cd /d %SOAPUI_HOME%..\bin
+      echo Write your commands here
+      testrunner.bat "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"
+      echo Hello world
