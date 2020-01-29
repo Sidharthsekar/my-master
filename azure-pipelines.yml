@@ -24,6 +24,6 @@ steps:
     script: |
       cd /d %SOAPUI_HOME%..\bin
 
-      echo %SOAPUI_HOME%
+      echo %JAVA_HOME%
       testrunner.bat "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"
       echo Hello world
