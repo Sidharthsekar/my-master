@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -19,9 +20,5 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CmdLine@2
   inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
-      cd %SOAPUI_HOME%..\bin
-      testrunner.bat -j "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"
+    script: 'testrunner.bat "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"'
+    workingDirectory: 'C:\Program Files (x86)\SmartBear\SoapUI-5.5.0\bin'
