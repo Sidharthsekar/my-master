@@ -22,8 +22,13 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
+
+      cd C:\Program Files (x86)\SmartBear\SoapUI-5.5.0\bin
+      
+
       cd /d %SOAPUI_HOME%..\bin
 
       echo %JAVA_HOME%
       testrunner.bat "F:\SOAPUI\Project\Currency-Convertor-soapui-project.xml"
       echo Hello world
+
